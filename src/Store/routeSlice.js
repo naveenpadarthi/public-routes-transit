@@ -39,12 +39,12 @@ const routeSlice = createSlice({
     },
     
     deleteRoute: (state, action) => {
-      state.routes = state.routes.filter(route => route.routeId != action.payload);
+      state.routes = state.routes.filter(route => route.routeId !== action.payload);
     },
     updateRoute: (state, action) => {
       const { routeId, updatedRoute } = action.payload;
-      const routeIndex = state.routes.findIndex(route => route.routeId == routeId);
-      if (routeIndex != -1) {
+      const routeIndex = state.routes.findIndex(route => String(route.routeId) === String(routeId));
+      if (routeIndex !== -1) {
         state.routes[routeIndex] = updatedRoute;
       }
     }

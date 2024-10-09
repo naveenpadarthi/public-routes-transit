@@ -1,7 +1,7 @@
 import React,{ useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { addRoute, updateRoute } from './Store/routeSlice';
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import GooglePlacesAutocomplete ,{ geocodeByPlaceId, getLatLng } from 'react-google-places-autocomplete'
 import "./addRoute.css";
 
@@ -24,7 +24,7 @@ function AddRoute() {
 
     useEffect(() => {
         if (id) {
-            const selectedRoute = routes.find(route => route.routeId == id);
+            const selectedRoute = routes.find(route => String(route.routeId) === String(id));
             if (selectedRoute) {
                 setRoute(selectedRoute);
             }
@@ -78,7 +78,7 @@ function AddRoute() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const routeNameValid = routeData.routeName.trim()==""
+        const routeNameValid = routeData.routeName.trim()===""
         const invalidStop = routeData.stops.some(stop => 
             (stop.latitude === '' || stop.longitude === '')
         );
