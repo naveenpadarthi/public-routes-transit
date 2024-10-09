@@ -2,22 +2,26 @@ import { createSlice } from '@reduxjs/toolkit';
 
 
 const initialState = {
-  routes: [{ routeName:"Amalapuram to Eluru",direction: "DOWN",routeId:1, stops: [
-
-    {
-        stopId: 1,
-        stopName: "Amalapuram",
-        latitude:" 16.5775",
-        longitude:" 82.1031"
-    },
-    {
-        stopId: 3,
-        stopName: "Eluru",
-        latitude:" 16.678059984033368",
-        longitude:" 81.02370874262965"
-    }],
-    status: "Active",
-  }]
+  routes: [{
+    routeId:1,
+    routeName: "Hyderabad to Ongole",
+    direction: "UP",
+    stops: [
+        {
+            StopId: 1,
+            stopName: "Hyderabad, Telangana, India",
+            latitude: "17.406498",
+            longitude: "78.47724389999999"
+        },
+        {
+            StopId: 2,
+            stopName: "Ongole, Andhra Pradesh, India",
+            latitude: "15.5057232",
+            longitude: "80.049922"
+        }
+    ],
+    status: "Active"
+}]
 }
 
 const routeSlice = createSlice({

@@ -57,7 +57,7 @@ function RouteAndMapView() {
             
             <div className="load-map">
                 <Map
-                    mapId='65f5b09124c2b711'
+                    mapId={process.env.REACT_APP_MAP_ID}
                     defaultCenter={{lat: 22.54992, lng: 0}}
                     defaultZoom={3}
                     gestureHandling={'greedy'}

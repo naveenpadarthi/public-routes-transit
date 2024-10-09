@@ -7,7 +7,7 @@ import { APIProvider } from '@vis.gl/react-google-maps';
 function App() {
   return (
     <Provider store={store}>
-      <APIProvider apiKey='AIzaSyC5uvToAecLTUq1ZLmy6OelB_zl_LljEVk'>
+      <APIProvider apiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
         <Outlet/>
       </APIProvider>
     </Provider>

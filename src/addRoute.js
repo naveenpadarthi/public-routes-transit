@@ -150,7 +150,7 @@ function AddRoute() {
                         <label>{stop.stopName || `Stop ${index + 1}`}</label>
                         <GooglePlacesAutocomplete
                             key={`autocomplete-${stop.StopId}`}
-                            apiKey="AIzaSyC5uvToAecLTUq1ZLmy6OelB_zl_LljEVk"
+                            apiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
                             selectProps={{
                                 className:"auto-complete-cls",
                                 onChange: (value) => handleStopSelect(value, index),
