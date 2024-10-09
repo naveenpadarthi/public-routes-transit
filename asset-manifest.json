@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/public-routes-transit/static/css/main.47549cd3.css",
+    "main.js": "/public-routes-transit/static/js/main.802ebd0d.js",
+    "static/js/453.ca6bcd1b.chunk.js": "/public-routes-transit/static/js/453.ca6bcd1b.chunk.js",
+    "index.html": "/public-routes-transit/index.html",
+    "main.47549cd3.css.map": "/public-routes-transit/static/css/main.47549cd3.css.map",
+    "main.802ebd0d.js.map": "/public-routes-transit/static/js/main.802ebd0d.js.map",
+    "453.ca6bcd1b.chunk.js.map": "/public-routes-transit/static/js/453.ca6bcd1b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.47549cd3.css",
+    "static/js/main.802ebd0d.js"
+  ]
+}
